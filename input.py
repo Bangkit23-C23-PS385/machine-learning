@@ -1,0 +1,13 @@
+import tensorflow as tf
+
+#### TRANSFORM INPUT
+def transform_input(input):
+  sym = ['pus_filled_pimples', 'brittle_nails', 'weakness_of_one_body_side', 'pain_in_anal_region', 'joint_pain', 'cramps', 'loss_of_smell', 'bruising', 'nausea', 'shivering', 'rusty_sputum', 'internal_itching', 'yellowish_skin', 'diarrhea', 'mucoid_sputum', 'bladder_discomfort', 'chest_pain', 'blurred_and_distorted_vision', 'dizziness', 'extra_marital_contacts', 'swelling_of_stomach', 'lethargy', 'irregular_sugar_level', 'inflammatory_nails', 'congestion', 'cold_hands_and_feets', 'swollen_blood_vessels', 'swelling_joints', 'chills', 'malaise', 'anxiety', 'small_dents_in_nails', 'swelled_lymph_nodes', 'stiff_neck', 'fluid_overload', 'visual_disturbances', 'palpitations', 'altered_sensorium', 'bloody_stool', 'restlessness', 'puffy_face_and_eyes', 'constipation', 'continuous_feel_of_urine', 'receiving_blood_transfusion', 'swollen_legs', 'throat_irritation', 'abnormal_menstruation', 'loss_of_appetite', 'coma', 'back_pain', 'weight_gain', 'itching', 'distention_of_abdomen', 'high_fever', 'drying_and_tingling_lips', 'depression', 'foul_smell_ofurine', 'enlarged_thyroid', 'mild_fever', 'dischromic_patches', 'dehydration', 'sweating', 'red_sore_around_nose', 'nodal_skin_eruptions', 'lack_of_concentration', 'hip_joint_pain', 'weight_loss', 'muscle_pain', 'knee_pain', 'patches_in_throat', 'continuous_sneezing', 'sunken_eyes', 'burning_micturition', 'scurrying', 'pain_behind_the_eyes', 'family_history', 'prominent_veins_on_calf', 'unsteadiness', 'ulcers_on_tongue', 'irritability', 'blackheads', 'redness_of_eyes', 'runny_nose', 'painful_walking', 'receiving_unsterile_injections', 'muscle_weakness', 'history_of_alcohol_consumption', 'polyuria', 'toxic_look_(typhos)', 'pain_during_bowel_movements', 'abdominal_pain', 'silver_like_dusting', 'acidity', 'excessive_hunger', 'indigestion', 'loss_of_balance', 'spotting_urination', 'belly_pain', 'sinus_pressure', 'acute_liver_failure', 'headache', 'cough', 'slurred_speech', 'breathlessness', 'dark_urine', 'stomach_bleeding', 'yellow_crust_ooze', 'fatigue', 'blood_in_sputum', 'neck_pain', 'passage_of_gases', 'stomach_pain', 'vomiting', 'weakness_in_limbs', 'watering_from_eyes', 'red_spots_over_body', 'increased_appetite', 'mood_swings', 'muscle_wasting', 'phlegm', 'skin_rash', 'obesity', 'fast_heart_rate', 'movement_stiffness', 'irritation_in_anus', 'spinning_movements', 'skin_peeling', 'yellow_urine', 'yellowing_of_eyes', 'blister', 'swollen_extremeties']
+
+  for i in range(len(sym)):
+    if sym[i] in input:
+      sym[i] = 1
+    else:
+      sym[i] = 0
+
+  return sym
