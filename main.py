@@ -48,7 +48,6 @@ def hello_pubsub(event, context):
   result = {'disease': output}
   dumped_result = json.dumps(result)
   publish(dumped_result)
-  context.pubsub_ack()
 
 def publish(result):
   # publish
